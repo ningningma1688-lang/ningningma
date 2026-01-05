@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ningning Ma | 马宁宁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+  <!-- 顶部导航 -->
+  <header class="topnav">
+    <div class="nav-inner">
+      <div class="nav-name">Ningning Ma</div>
+      <nav>
+        <a class="active" href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="hobbies.html">Hobbies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- 左侧栏 -->
+    <aside class="sidebar">
+      <img src="./assets/avatar.jpg" alt="Ningning Ma" class="avatar"
+           onerror="this.style.display='none'">
+      <h1>Ningning Ma</h1>
+      <p class="pronoun">she/her</p>
+      <p class="role">Master’s Student<br>Harvard Graduate School of Education</p>
+
+      <ul class="meta">
+        <li>📍 Cambridge, MA</li>
+        <li>🎓 Education Policy & Analysis</li>
+      </ul>
+
+      <div class="links">
+        <a href="mailto:ningningma@gse.harvard.edu">Email</a>
+        <a href="https://www.linkedin.com/in/ningningma1/" target="_blank">LinkedIn</a>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <section class="content">
+      <h2>About me</h2>
+
+      <p>
+        Hi! My name is <strong>Ningning Ma</strong>. I am an education researcher and practitioner
+        focusing on <strong>gender, social inequality, and global mobility</strong>.
+        I am currently a Master’s student in Education Policy & Analysis at the
+        <strong>Harvard Graduate School of Education</strong>.
+      </p>
+
+      <p>
+        My academic work combines <strong>ethnographic research</strong> and
+        <strong>policy analysis</strong> to examine how education reshapes women’s life trajectories,
+        family relations, and care responsibilities in China and transnational contexts.
+      </p>
+
+      <p>
+        If you are interested in my academic background and research experiences,
+        please see my <a href="resume.html">Resume</a>.
+        If you’d like to learn more about who I am beyond academia,
+        feel free to explore my <a href="hobbies.html">Hobbies</a> page.
+      </p>
+
+      <hr>
+
+      <h3>关于我</h3>
+
+      <p>
+        我是一名关注<strong>性别、社会不平等与全球流动</strong>的教育研究者与实践者，
+        现就读于<strong>哈佛大学教育研究生院（HGSE）</strong>教育政策与分析硕士项目。
+      </p>
+
+      <p>
+        我的研究以民族志方法为核心，结合政策分析，关注教育如何在中国及跨国语境中
+        重塑女性的生命轨迹、家庭关系与照护责任，并致力于将研究成果转化为
+        可落地的教育实践与公共讨论。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
