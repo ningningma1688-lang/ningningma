@@ -1,180 +1,800 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>马宁宁 | 教育研究与体育艺术多专长</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Roboto', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif; background: #f4f5ff; margin: 0; padding: 0;}
-    .container { max-width: 880px; background: #fff; margin: 40px auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(120,120,200,0.06); padding: 40px 40px 10px 40px; border: 1px solid #edeef7;}
-    h1 { font-size: 2.2em; color: #3f51b5; margin-bottom: 10px;}
-    h2 { color: #5f6ddb; border-bottom: 2.5px solid #5f6ddb; display: inline-block; padding-bottom: 3px; margin-top:40px;}
-    h3 { color: #d68627; font-size:1.06em; margin-top:26px;}
-    ul { padding-left: 20px;}
-    .badge { display: inline-block; background: #e3f2fd; color: #2561b2; padding: 5px 16px; border-radius: 18px; margin: 2px 8px 2px 0; font-size: 0.96em; border: 1px solid #90caf9;font-weight:500;}
-    .orange-badge { background: #fff3e0; color: #e65100; border: 1px solid #ff9800;}
-    .block { margin-bottom: 25px;}
-    .split { display: flex; flex-wrap: wrap; gap: 18px;}
-    .split > div { min-width: 320px; flex: 1;}
-    .icon {font-size:1.2em;vertical-align:middle;margin-right:6px;}
-    .list-dot { margin-right: 4px;color:#ac6d07;}
-    .contact-info a { color: #2066ae; text-decoration: none;}
-    .footer {margin-top:40px; color: #7a7a7a; font-size: 0.97em; text-align: right;}
-    @media (max-width: 680px) { .container { padding: 18px 3vw 6vw 3vw; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马宁宁 - Education Researcher & Practitioner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin: 5px 0;
+        }
+        
+        .tagline {
+            font-size: 0.95em;
+            margin-top: 15px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        main {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 35px;
+        }
+        
+        section h2 {
+            font-size: 1.6em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .section-content {
+            margin-left: 0;
+        }
+        
+        .education-item, .work-item, .research-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #764ba2;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .education-item h3, .work-item h3, .research-item h3 {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .description {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .description ul {
+            list-style: none;
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+        
+        .description li {
+            margin: 5px 0;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .description li:before {
+            content: "•";
+            color: #764ba2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .publication {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .publication a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .publication a:hover {
+            text-decoration: underline;
+        }
+        
+        .cert-badge, .award-badge {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #333;
+            padding: 8px 12px;
+            margin: 5px 5px 5px 0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid #ddd;
+        }
+        
+        .cert-badge {
+            background: #e3f2fd;
+            border: 1px solid #667eea;
+            color: #667eea;
+        }
+        
+        .award-badge {
+            background: #fff3e0;
+            border: 1px solid #ff9800;
+            color: #f57c00;
+        }
+        
+        .contact-section {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .contact-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-label {
+            font-weight: bold;
+            color: #764ba2;
+            width: 80px;
+        }
+        
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .hobby-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .hobby-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #f0f0f0;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            main {
+                padding: 25px;
+            }
+            
+            .hobby-section {
+                grid-template-columns: 1fr;
+            }
+            
+            section h2 {
+                font-size: 1.3em;
+            }
+        }
+        
+        .divider {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>马宁宁 <span style="font-size:0.60em; color:#999;">| Education Researcher & Practitioner</span></h1>
-    <div style="margin-bottom:16px;color:#565885">
-      Gender, Inequality, and Global Mobility
+    <div class="container">
+        <header>
+            <h1>马宁宁</h1>
+            <p>Education Researcher & Practitioner</p>
+            <p class="tagline">Gender, Inequality, and Global Mobility</p>
+        </header>
+        
+        <main>
+            <!-- 教育背景 -->
+            <section>
+                <h2>🎓 教育背景</h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <h3>哈佛大学 研究生</h3>
+                        <div class="location">美国·马萨诸塞州剑桥</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>加州大学洛杉矶分校（UCLA）本科</h3>
+                        <div class="location">美国·加州洛杉矶</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>广东碧桂园学校 AP美式高中</h3>
+                        <div class="location">中国·广东佛山</div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 专业证书 -->
+            <section>
+                <h2>📜 专业证书</h2>
+                <div class="section-content">
+                    <span class="cert-badge">高中英语教师资格证</span>
+                    <span class="cert-badge">英文导游证</span>
+                    <span class="cert-badge">初级会计证</span>
+                    <span class="cert-badge">美国国家运动医学学会（NASM）认证营养教练</span>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 研究经历 -->
+            <section>
+                <h2>🔬 研究经历</h2>
+                <div class="section-content">
+                    <div class="research-item">
+                        <h3>民族志研究者</h3>
+                        <div class="location">哈佛大学教育研究生院 | 美国·剑桥</div>
+                        <div class="date">2025年9月 – 2025年12月 | 导师：Gabrielle Oliveira 教授</div>
+                        <div class="description">
+                            <ul>
+                                <li>通过对中国后独生子女政策背景下20位受过高等教育的独生女开展深度访谈，分析其教育与跨国流动经历如何重塑对父母养老责任的理解与实践</li>
+                                <li>对访谈资料进行主题分析，提出"反思型照护（reflexive eldercare）"概念，揭示独生女如何超越传统服从式孝道，重新定义"负责任的代际照护"</li>
+                                <li>已完成完整学术论文，并投稿至国际同行评审期刊 Journal of Family Studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>研究助理（Project Zero）</h3>
+                        <div class="location">哈佛大学教育研究生院 | 美国·剑桥</div>
+                        <div class="date">2025年9月 – 2025年12月</div>
+                        <div class="description">
+                            <strong>项目：</strong>"LET'S TALK! 流动世界中的跨文化对话能力培养"
+                            <ul>
+                                <li>参与由Verónica Boix-Mansilla博士主导的跨文化对话能力框架（Intercultural Dialogue Dispositions Framework）构建工作，重点从性别与迁移视角开展分析</li>
+                                <li>开展系统性文献综述与分析备忘录，研究女性迁移叙事如何影响跨文化语境中的同理心、认同与归属感</li>
+                                <li>综合女性主义理论与跨文化对话理论，提炼关键能力维度，并设计促进同理沟通与包容性对话的反思性教学活动</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>独立研究项目</h3>
+                        <div class="location">加州大学洛杉矶分校（UCLA）| 美国·洛杉矶</div>
+                        <div class="date">2024年3月 – 7月 | 导师：Sylvia Hurtado 教授</div>
+                        <div class="description">
+                            <ul>
+                                <li>通过系列生命史访谈，探究高等教育如何影响中国农村女性的性别角色认知与家庭内部协商机制</li>
+                                <li>进行跨案例比较分析，构建解释女性自主性与代际期望差异的分析框架</li>
+                                <li>将研究成果转化为实践模型，协助地方NGO设计扩大农村女性接受高等教育机会的项目方案</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 工作经历 -->
+            <section>
+                <h2>💼 工作经历</h2>
+                <div class="section-content">
+                    <div class="work-item">
+                        <h3>内容撰写 | EdHyve（留学顾问平台）</h3>
+                        <div class="location">美国·马萨诸塞州剑桥</div>
+                        <div class="date">2025.09 – 至今</div>
+                        <div class="description">
+                            <ul>
+                                <li>撰写教育文章，帮助学生及家庭理解平台提供的升学咨询服务，分享真实案例故事</li>
+                                <li>将内容以多格式、多平台形式重新编辑（如博客、LinkedIn），并按照品牌与传播策略优化内容呈现</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item">
+                        <h3>英语教师 | 赤水市两河口学校</h3>
+                        <div class="location">中国·贵州赤水市</div>
+                        <div class="date">2024.09 – 2025.07</div>
+                        <div class="description">
+                            <ul>
+                                <li>以学生为中心、具文化回应性的教学理念设计并实施英语课程</li>
+                                <li>开展20余次入户家访，从家庭经济压力、劳动力迁移和基层治理等角度分析学生教育抱负的形成机制</li>
+                                <li>设计青少年职业生涯探索课程，帮助学生进行自我认知与目标设定；根据不同年级需求不断迭代课程内容，并与当地教师协作，通过教师培训将课程推广至10所乡村学校，惠及5000名小学学生</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item">
+                        <h3>联合创始人 | "媖才蓓出"未来梦想职业体验教育计划</h3>
+                        <div class="location">中国·海南</div>
+                        <div class="date">2017.09 - 2020.10</div>
+                        <div class="description">
+                            <ul>
+                                <li>为300位海南贫困女童提供职业体验课程</li>
+                                <li>带55名女童前往海南博鳌乐城国际医疗旅游先行区进行研学旅行</li>
+                                <li>举办海南新红色娘子军中国女大学生领导力夏令营，影响中国女大学生10万+，一周收到1300+份报名表</li>
+                                <li>项目故事在全网获得两百万+的浏览量</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item">
+                        <h3>多个教学岗位</h3>
+                        <div class="description">
+                            <ul>
+                                <li>新东方（前途出国咨询有限公司）北京校区 | 2023.09-2023.12 | 英国预科、托福、AEAS、Ukiset考试辅导</li>
+                                <li>ETHOS壹思国际音乐教育 | 2023.02-2023.12 | 雅思阅读听力、MAP考试、国际学校申请面试</li>
+                                <li>国子乐学（北京）文化咨询有限公司 | 2023.02-2023.12 | 学龄前英语启蒙</li>
+                                <li>北京第五空间留学规划 | 2023.02-2023.12 | 雅思阅读听力一对一</li>
+                                <li>北京赛高咨询有限公司 | 2023.05-2023.12 | SAT数学辅导</li>
+                                <li>北京傲学信息咨询有限公司 | 2022.05-2023.12 | 小升初笔试辅导</li>
+                                <li>线上国际课程教学 | 2020.09-2023.12 | IG数学、SAT数学、AP宏微观经济学</li>
+                                <li>甘肃支教项目 | 2018.06 | 32名5-6年级学生英语教学</li>
+                                <li>新航道国际教育集团北京校区 | 2023.05-2023.12 | 雅思6.5分封闭班</li>
+                                <li>北京市私立汇佳国际学校 | 2023.08 | ESL与经济课程教学</li>
+                                <li>环球雅思北京校区 | 2023.05-2023.12 | 雅思一对一阅读技巧</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item">
+                        <h3>内容编辑与自媒体相关</h3>
+                        <div class="description">
+                            <ul>
+                                <li><strong>个人作家团队内容编辑</strong> | 2021.07-2021.09 | 帮助福布斯U30获奖者整理会议记录；参与《底层逻辑》一书编辑工作，该书出版后成为当当网新书励志榜第一</li>
+                                <li><strong>哈了个佛微信公众号编辑</strong> | 2020.09-2022.02 | 花旗银行中国区个人品牌打造训练营内容整理；整理加密货币底层逻辑分享；运营4500粉丝公众号</li>
+                                <li><strong>公众号编辑</strong> | 中女职业高尔夫赛事（北京）有限公司 | 2024.09 | FILA GOLF女子菁英赛期间日更新公众号；整理赛事动态、选手风采、赛况分析</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item">
+                        <h3>其他实习与项目经历</h3>
+                        <div class="description">
+                            <ul>
+                                <li><strong>筹资&推广实习生 | "小核桃孕育"早教项目（中华教育改进社）</strong> | 2018.11-2020.01 | 服务2000名低收入母亲；撰写商业计划书；参加Technovation Girls和LEAD2030挑战赛</li>
+                                <li><strong>财务部实习生 | 广东圣丰索菲特酒店</strong> | 2017.07 | 记账、对账、点算、打支票；参与财务审计评估</li>
+                                <li><strong>金融实习生 | 广州市德铭投资有限公司</strong> | 2020.07-2020.09 | 数据整理分析；短视频市场推广</li>
+                                <li><strong>实习生 | Hi China国际青年发展联盟</strong> | 2019.08-2020.05 | 研究世界经济论坛组织结构</li>
+                                <li><strong>项目实习生 | 宜居广州（非盈利环保组织）</strong> | 2017.01-2018.08 | 塑料微珠产品调研；撰写报告获得500人和5个NGO联合签署</li>
+                                <li><strong>内容设计实习生 | 广州市越秀区青草青少年成长服务中心</strong> | 2018.07-2019.1 | 戏剧夏令营小组引导；活动设计；现场把控</li>
+                                <li><strong>营地辅导员 | 菁果国际教育</strong> | 2017.07、2018.02 | 结营典礼活动策划；日常活动总结改进</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+          <!-- SSCI期刊专区 -->
+<section>
+    <h2 style="font-size: 1.6em; color: #FFD700; border-bottom: 3px solid #FFD700; padding-bottom: 10px; margin-bottom: 25px; display: inline-block;">
+        ⭐ SSCI国际期刊发表
+    </h2>
+    
+    <div style="display: grid; gap: 20px;">
+        <div class="publication-ssci" style="
+            border-left: 8px solid #FFD700;
+            background: linear-gradient(135deg, #fffbf0 0%, #fff9f0 100%);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.15);
+        ">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="background: #FFD700; color: #333; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: 700;">SSCI</span>
+            </div>
+            
+            <h3 style="color: #333; margin: 15px 0 10px 0; font-size: 1.15em; line-height: 1.6;">
+                打破壁垒：农村中国的性别平等与教育赋权
+            </h3>
+            
+            <p style="color: #666; margin: 8px 0; font-size: 0.95em;">
+                <strong> 独作 </strong>
+            </p>
+            
+            <p style="color: #666; margin: 8px 0; font-size: 0.95em;">
+                <strong>期刊：</strong><em>Asian Women</em>
+            </p>
+            
+            <p style="color: #666; margin: 8px 0; font-size: 0.95em;">
+                <strong>卷期：</strong>2025, Volume 41, Number 4, pp. 155-170
+            </p>
+            
+            <p style="margin-top: 15px;">
+                <a href="https://doi.org/10.64446/aw.2025.12.41.4.155" target="_blank" style="
+                    display: inline-block;
+                    background: #667eea;
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s;
+                ">
+                    📖 查看论文 (DOI: 10.64446/aw.2025.12.41.4.155)
+                </a>
+            </p>
+        </div>
     </div>
+</section>
 
-    <!-- 教育背景 -->
-    <h2>🎓 教育背景</h2>
-    <div class="block">
-      <ul>
-        <li><b>哈佛大学</b> 研究生<br><span style="color: #999;">美国·马萨诸塞州剑桥</span></li>
-        <li><b>加州大学洛杉矶分校（UCLA）</b> 本科<br><span style="color: #999;">美国·加州洛杉矶</span></li>
-        <li><b>广东碧桂园学校 AP美式高中</b><br><span style="color: #999;">中国·广东佛山</span></li>
-      </ul>
-    </div>
+<hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
 
-    <!-- 专业证书 -->
-    <h2>📜 专业证书</h2>
-    <div class="block">
-      <span class="badge">高中英语教师资格证</span>
-      <span class="badge">英文导游证</span>
-      <span class="badge">初级会计证</span>
-      <span class="badge">NASM 认证营养教练</span>
-    </div>
-
-    <!-- 研究经历 -->
-    <h2>🔬 研究经历</h2>
-    <div class="block">
-      <h3>民族志研究者 | <span style="color:#6970c7">哈佛大学教育研究生院</span> | 美国·剑桥 | 2025.09 – 2025.12</h3>
-      <ul>
-        <li>导师：Gabrielle Oliveira 教授</li>
-        <li>访谈中国后独生子女政策下20位高学历独生女，分析教育与跨国流动对养老责任观念的影响</li>
-        <li>提出"反思型照护"概念，探讨独生女如何重新定义“负责任的代际照护”</li>
-        <li>论文已投稿 Journal of Family Studies</li>
-      </ul>
-      <h3>研究助理（Project Zero） | 哈佛大学教育研究生院 | 2025.09 – 2025.12</h3>
-      <ul>
-        <li>参与跨文化对话能力框架构建，聚焦性别与迁移</li>
-        <li>系统文献综述，研究女性迁移叙事对认同与同理心的影响</li>
-        <li>设计同理沟通与包容性对话教学活动</li>
-      </ul>
-      <h3>独立研究项目 | UCLA | 2024.03 – 2024.07</h3>
-      <ul>
-        <li>导师：Sylvia Hurtado 教授</li>
-        <li>探索高等教育对中国农村女性性别角色认知和家庭协商机制的影响</li>
-        <li>提出分析模型，协助NGO扩大农村女性教育机会</li>
-      </ul>
-    </div>
-
-    <!-- 工作经历 -->
-    <h2>💼 工作经历</h2>
-    <div class="block">
-      <h3>内容撰写 | EdHyve（留学顾问平台） | 2025.09–至今 | 美国 剑桥</h3>
-      <ul>
-        <li>撰写教育文章，优化多平台内容呈现</li>
-      </ul>
-      <h3>英语教师 | 赤水市两河口学校 | 2024.09–2025.07 | 贵州赤水</h3>
-      <ul>
-        <li>以学生为中心设计课程，家访调研教育抱负形成机制</li>
-        <li>设计青少年职业生涯探索课程，惠及10校5000小学生</li>
-      </ul>
-      <h3>联合创始人 | "媖才蓓出"未来梦想职业体验教育计划 | 2017.09-2020.10 | 海南</h3>
-      <ul>
-        <li>为300名贫困女童提供职业体验课程</li>
-        <li>带队开展国际医疗旅游研学，发起影响10万+女大学生的领导力夏令营</li>
-      </ul>
-      <h3>多个教学岗位 & 编辑经历</h3>
-      <ul>
-        <li>新东方、环球雅思、北京市私立汇佳国际学校、ETHOS 国际音乐教育、国子乐学等（详见简历/README）</li>
-        <li>编辑出版《底层逻辑》等畅销书，4500+粉公众号运营，赛事/活动内容编辑</li>
-      </ul>
-      <h3>其他实习与社会项目</h3>
-      <ul>
-        <li>早教项目、财务部、金融、青年组织、环保调研、营地辅导等多领域实习与志愿经历</li>
-      </ul>
-    </div>
-
-    <!-- 学术发表 -->
-    <h2>⭐ SSCI国际期刊发文</h2>
-    <div class="block">
-      <b>打破壁垒：农村中国的性别平等与教育赋权</b>（独作）<br>
-      <span style="color:#666;">Asian Women, 2025, Vol.41(4): 155-170</span><br>
-      <a href="https://doi.org/10.64446/aw.2025.12.41.4.155" target="_blank">📖 查看论文 (DOI)</a>
-    </div>
-    <h2>📚 其他学术发表</h2>
-    <div class="block" style="font-size:0.97em;">
-      <ul>
-        <li>流动儿童的教育机会：基于中国广州的案例研究 | <a href="https://isscy.com/web/viewer.php?id=669" target="_blank">阅读</a></li>
-        <li>流动儿童教育现状及职业教育 | <a href="https://old.cqvip.com/QK/72177X/201907/epub1000001750187.html" target="_blank">阅读</a></li>
-        <li>塑料微珠的危害及处理建议 | <a href="https://d.wanfangdata.com.cn/periodical/qyzl201904060" target="_blank">阅读</a></li>
-        <li>流动儿童的未来：政府与NGO的互补关系 | 全国青年观察竞赛最高奖</li>
-      </ul>
-    </div>
-
-    <!-- 荣誉与认证 -->
+<!-- 其他论文 -->
+<section>
+    <h2 style="font-size: 1.6em; color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-bottom: 25px; display: inline-block;">
+        📚 其他学术发表
+    </h2>
+                    <div class="publication">
+                        <strong>流动儿童的教育机会：基于中国广州的案例研究</strong><br>
+                        马宁宁 | <em>International Social Science Conference for Youth (ISSCY)</em> 论文集<br>
+                        <a href="https://isscy.com/web/viewer.php?id=669" target="_blank">https://isscy.com/web/viewer.php?id=669</a>
+                    </div>
+                    
+                    <div class="publication">
+                        <strong>流动儿童教育现状及如何更好提供职业教育</strong><br>
+                        马宁宁 | <em>社会科学</em>, 2019(07)<br>
+                        <a href="https://old.cqvip.com/QK/72177X/201907/epub1000001750187.html" target="_blank">https://old.cqvip.com/QK/72177X/201907/epub1000001750187.html</a>
+                    </div>
+                    
+                    <div class="publication">
+                        <strong>塑料微珠的巨大危害及其处理方式建议</strong><br>
+                        马宁宁 | <em>区域治理</em>, 2019(04)<br>
+                        <a href="https://d.wanfangdata.com.cn/periodical/qyzl201904060" target="_blank">https://d.wanfangdata.com.cn/periodical/qyzl201904060</a>
+                    </div>
+                    
+                    <div class="publication">
+                        <strong>流动儿童的未来：政府与NGO的互补关系</strong><br>
+                        马宁宁 | <em>全国青年观察竞赛（Youth Observation Competition, YOC）最高奖</em>
+                    </div>
+                </div>
+            </section>
+            
+   
+<section>
     <h2>🏆 荣誉与认证</h2>
-    <h3>🎓 认证与培训</h3>
-    <div class="block">
-      <span class="badge">德瑞姆与ACDC亚洲职业生涯发展中心「人生设计卡执行师」</span>
-      <span class="badge">美国公益组织PYE 艺术创意赋能培训</span>
-    </div>
-    <h3>🏅 竞赛与奖项</h3>
-    <div class="block">
-      <span class="badge orange-badge">2020性别平等社会创新大赛TOP10 ｜联合国妇女署</span>
-      <span class="badge orange-badge">2019青年创客挑战赛三等奖(国际) ｜联合国开发计划署</span>
-      <span class="badge orange-badge">2019中国女大学生创新创业项目大赛全国TOP3 ｜北京妇联、中国女基会</span>
+    <!-- 认证与培训 -->
+    <div style="margin-bottom:20px;">
+        <h3 style="color:#667eea; margin-bottom:7px;">🎓 认证与培训</h3>
+        <div>
+            <span class="cert-badge">德瑞姆与ACDC亚洲职业生涯发展中心「人生设计卡执行师」</span>
+            <span class="cert-badge">美国公益组织PYE 艺术创意赋能培训</span>
+        </div>
     </div>
 
-    <!-- 个人爱好与竞技 -->
-    <h2>🎯 个人爱好 & 竞技成绩</h2>
-    <div class="split">
-      <div>
-        <h3>运动/舞蹈/艺术</h3>
-        <ul>
-          <li>🏄‍♀️ 冲浪 (ASI认证/国际赛事决赛多奖)</li>
-          <li>🎭 拉丁舞&摩登舞 (CBDF金星/国际&全国大奖)</li>
-          <li>🎭 中国舞 (北京舞蹈学院教师证书/联合国展演金奖)</li>
-          <li>🥋 跆拳道 (韩国黑带/各类获奖)</li>
-          <li>🎹 钢琴 (ABRSM八级/港赛精英奖)</li>
-          <li>💪 健美 (WNBF健身赛季军)</li>
-          <li>⛳ 高尔夫 (中国高协认证教练)</li>
-          <li>🪁 风筝冲浪 (IKO L3)</li>
-        </ul>
-      </div>
-      <div>
-        <h3>其他运动/技能</h3>
-        <ul>
-          <li>🏂 滑雪 (双板社会指导员/西南片区滑雪赛)</li>
-          <li>⛵ 帆船 (ASA 101)</li>
-          <li>🤿 自由潜 (AIDA二星)</li>
-          <li>🎾 网球 (PTR教练证)</li>
-          <li>🏊 救生员 (国家职业资格)</li>
-          <li>🍵 茶艺 (初级茶艺师)</li>
-        </ul>
-      </div>
+    <!-- 竞赛与奖项 -->
+    <div>
+        <h3 style="color: #f57c00; margin-bottom:7px;">🏅 竞赛与奖项</h3>
+        <div>
+            <span class="award-badge">2020性别平等社会创新大赛TOP10｜联合国妇女署</span>
+            <span class="award-badge">2019青年创客挑战赛三等奖(国际)｜联合国开发计划署</span>
+            <span class="award-badge">2019中国女大学生创新创业项目大赛全国TOP3｜北京妇联、中国妇女发展基金会</span>    
+        </div>
     </div>
-    <div class="block">
-      <b>核心专长：</b> 国际级赛事经验 · 运动教练认证 · 艺术表演 · 户外极限运动
-    </div>
+</section>
 
-    <!-- 联系方式 -->
-    <h2>📧 联系方式</h2>
-    <div class="contact-info" style="font-size:1.08em;">
-      ✉️ 邮箱：<a href="mailto:ningningma@gse.harvard.edu">ningningma@gse.harvard.edu</a><br>
-      💬 微信：786465067<br>
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="18" style="vertical-align:middle;margin-right:4px;"> 
-      <a href="https://linkedin.com/in/ningningma1" target="_blank">LinkedIn</a>
-    </div>
+           <body>
+    <div class="container">
+        <header>
+            <h1>🎯 个人爱好 & 竞技成绩</h1>
+            <p>运动与艺术</p>
+        </header>
+        
+        <main>
+            <!-- 冲浪 -->
+            <section>
+                <h2>🏄‍♀️ 冲浪运动</h2>
+                <div class="sport-cards">
+                    <div class="sport-card featured">
+                        <div class="card-header">
+                            <span class="cert-badge-card">📄 国际冲浪认证 (ASI Academy of Surfing Instructors)Level 2 </span>
+                        </div>
+                        <div class="achievements-major">
+                            <div class="achievement international">
+                                <span class="level">🌍 国际赛事</span>
+                                <span class="title">2024 国际滑水联合会(IWWF) 尾波冲浪世界杯Skim组第四名</span>
+                            </div>
+                            <div class="achievement international">
+                                <span class="level">🌍 国际赛事</span>
+                                <span class="title">第63届美国东海岸冲浪锦标赛女子长板17岁+组季军</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 舞蹈 -->
+            <section>
+                <h2>💃拉丁舞&摩登舞 </h2>
+                <div class="sport-cards">
+                    <div class="sport-card featured">
+                        <div class="card-header">
+                            <span class="cert-badge-card">📄中国体育舞蹈联合会（CBDF）拉丁舞金星二级</span>
+                            <span class="cert-badge-card secondary">📄中国体育舞蹈联合会（CBDF）摩登舞银牌</span>
+                        </div>
+                        <div class="achievements-major">
+                            <div class="achievement international">
+                                <span class="level">🌍 国际赛事</span>
+                                <span class="title">2017 WDC第15届国际标准舞世界公开赛业余16岁女单新人B组拉丁舞二等奖</span>
+                            </div>
+                            <div class="achievement international">
+                                <span class="level">🌍 国际赛事</span>
+                                <span class="title">2018 WDC第16届国际标准舞公开赛暨第四届青少年世界公开赛</span>
+                            </div>
+                            <div class="achievement national">
+                                <span class="level">🏅 全国赛</span>
+                                <span class="title">2017 保利中国杯总决赛业余16岁女单新人C组拉丁舞三等奖</span>
+                            </div>
+                            <div class="achievement national">
+                                <span class="level">🏅 全国赛</span>
+                                <span class="title">2016 周大福中国杯巡回赛年度总决赛业余14岁女单新人B组拉丁舞二等奖</span>
+                            </div>
+                            <div class="achievement national">
+                                <span class="level">🏅 全国赛</span>
+                                <span class="title">2016 CBDF中国杯巡回年度总决赛女单探戈第五名</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 中国舞 -->
+            <section>
+                <h2>🎭 中国舞 </h2>
+                <div class="sport-cards">
+                    <div class="sport-card featured">
+                        <div class="card-header">
+                            <span class="cert-badge-card">📄北京舞蹈学院中国舞教师等级证书</span>
+                        </div>
+                        <div class="achievements-major">
+                            <div class="achievement international">
+                                <span class="level">🌍 </span>
+                                <span class="title">2013 赴法国巴黎表演，获得文化中国·联合国教科文组织总部非物质文化遗产展演金奖</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 其他运动 -->
+            <section>
+                <h2>⚡ 其他个人爱好 </h2>
+                <div class="sport-cards-other">
+                    <div class="mini-card">
+                        <h4>🥋 跆拳道</h4>
+                        <span class="cert">📄韩国国技院跆拳道黑带</span>
+                        <p>2016 佛山市"水乡清泉杯"邀请赛｜竞技、品势第三名</p>
+                        <p>2025 美国大学生跆拳道东部联盟秋季联赛｜品势组 </p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>🎹 钢琴</h4>
+                        <span class="cert">📄英国皇家音乐学院联合委员会（ABRSM）八级</span>
+                        <p>2017 香港国际钢琴邀请赛｜精英奖</p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>💪 健美</h4>
+                        <p>2023 中国首届WNBF(World Natural Bodybuilding Federation)世界自然健美健身公开赛｜女子形体组季军</p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>⛳ 高尔夫</h4>
+                        <p>📄中国高尔夫球协会｜教练证 </p> 
+                        <p>2023 北京女子挑战赛｜职业业余配对赛</p>
+                    </div>
 
-    <div class="footer">© 2026 马宁宁 | Education Researcher & Practitioner</div>
-  </div>
-</body>
-</html>
+                    <div class="mini-card">
+                        <h4>🪁 风筝冲浪</h4>
+                        <p>国际风筝冲浪组织 IKO ｜Level3</p> 
+                    </div>
+                  
+                    <div class="mini-card">
+                        <h4>🏂 滑雪</h4>
+                        <p>📄国家职业资格证书｜双板社会指导员证 </p>
+                        <p>2025 四川省第七届全民健身冰雪季西南片区大众滑雪赛（西岭雪山） </p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>⛵ 帆船</h4>
+                        <p>美国帆船协会 ASA｜101</p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>🤿 自由潜水</h4>
+                        <p>国际自由潜水协会 AIDA｜二星</p>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <h4>🎾 网球</h4>
+                        <p>美国职业网球注册机构 PTR｜教练证</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <h4>🏊 游泳</h4>
+                        <p>国家职业资格证书｜救生员</p>
+                    </div>
+                        
+                    <div class="mini-card">
+                          <h4>🍵 茶艺</h4>
+                         <span class="cert"> 国家职业资格证书｜初级茶艺师</span>
+                    </div>
+                        
+           
+            </section>
+            
+            <hr class="divider">
+            
+            <!-- 总结 -->
+            <section style="background: #f8f9ff; padding: 25px; border-radius: 8px; border-left: 4px solid #667eea;">
+                <h3 style="color: #667eea; margin-bottom: 15px;">🌟 核心专长</h3>
+                <div class="badge-group">
+                   <span class="badge">国际级赛事经验</span>
+                   <span class="badge">运动教练认证</span>
+                   <span class="badge">艺术表演</span>
+                   <span class="badge">户外极限运动</span>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2026 马宁宁 | Education Researcher & Practitioner</p>
+        </footer>
+<!-- 联系方式 -->
+<section>
+    <div class="contact-section" style="
+        background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+        padding: 30px;
+        border-radius: 8px;
+        border-left: 5px solid #667eea;
+        margin-top: 30px;
+    ">
+        <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.2em;">📧 联系方式</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    background: #667eea;
+                    color: white;
+                    border-radius: 50%;
+                    font-weight: bold;
+                ">✉️</span>
+                <div>
+                    <p style="color: #999; font-size: 0.85em; margin: 0;">邮箱</p>
+                    <a href="mailto:ningningma@gse.harvard.edu" style="
+                        color: #667eea;
+                        text-decoration: none;
+                        font-weight: 600;
+                        transition: all 0.3s;
+                    " onmouseover="this.style.color='#764ba2'" onmouseout="this.style.color='#667eea'">
+                        ningningma@gse.harvard.edu
+                    </a>
+                </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    background: #09b83e;
+                    color: white;
+                    border-radius: 50%;
+                    font-weight: bold;
+                ">💬</span>
+                <div>
+                    <p style="color: #999; font-size: 0.85em; margin: 0;">微信</p>
+                    <p style="color: #333; font-weight: 600; margin: 0; cursor: pointer;" title="复制微信号">
+                        786465067
+                    </p>
+                </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    background: #0a66c2;
+                    color: white;
+                    border-radius: 50%;
+                    font-weight: bold;
+                ">in</span>
+                <div>
+                    <p style="color: #999; font-size: 0.85em; margin: 0;">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/ningningma1/" target="_blank" style="
+                        color: #0a66c2;
+                        text-decoration: none;
+                        font-weight: 600;
+                        transition: all 0.3s;
+                    " onmouseover="this.style.color='#004182'" onmouseout="this.style.color='#0a66c2'">
+                        linkedin.com/in/ningningma1
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
