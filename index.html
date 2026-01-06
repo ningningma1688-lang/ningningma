@@ -1,222 +1,30 @@
-<!-- 2026 Plan Navbar (Responsive + Anchor Scroll) -->
-<header class="site-header">
-  <div class="nav-wrap">
-    <a class="brand" href="index.html" aria-label="Go to home">
-      <span class="brand-dot"></span>
-      <span class="brand-text">2026 Plan</span>
-    </a>
+.hero-title{
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
 
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-label">Menu</span>
-    </button>
+.hero-name{
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0;
+}
 
-    <nav class="nav" id="navMenu">
-      <a class="nav-link" href="#overview">Overview</a>
-      <a class="nav-link" href="#q1">Q1</a>
-      <a class="nav-link" href="#q2">Q2</a>
-      <a class="nav-link" href="#q3">Q3</a>
-      <a class="nav-link" href="#q4">Q4</a>
-      <a class="nav-link" href="#milestones">Milestones</a>
-      <a class="nav-link" href="#systems">Systems</a>
-      <a class="nav-link" href="#weekly">Weekly</a>
-      <a class="nav-link cta" href="#review">Review</a>
-    </nav>
-  </div>
-</header>
+.plan-badge{
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffd400;
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
 
-<style>
-  :root{
-    --bg:#0b0b0f;
-    --panel:rgba(255,255,255,0.06);
-    --border:rgba(255,255,255,0.10);
-    --text:rgba(255,255,255,0.92);
-    --muted:rgba(255,255,255,0.68);
-    --accent:#ffd400;
-    --shadow:0 16px 40px rgba(0,0,0,0.35);
-    --radius:16px;
-  }
-
-  html{ scroll-behavior:smooth; }
-  body{ margin:0; }
-
-  .site-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:linear-gradient(to bottom, rgba(11,11,15,0.92), rgba(11,11,15,0.70));
-    backdrop-filter: blur(10px);
-    border-bottom:1px solid var(--border);
-  }
-
-  .nav-wrap{
-    max-width:1100px;
-    margin:0 auto;
-    padding:14px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-  }
-
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:var(--text);
-    font-weight:800;
-    letter-spacing:0.2px;
-  }
-  .brand-dot{
-    width:12px;height:12px;border-radius:999px;
-    background:var(--accent);
-    box-shadow:0 0 0 6px rgba(255,212,0,0.15);
-  }
-  .brand-text{ font-size:16px; }
-
-  .nav{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-  }
-
-  .nav-link{
-    text-decoration:none;
-    color:var(--muted);
-    font-size:13px;
-    padding:10px 12px;
-    border-radius:999px;
-    border:1px solid transparent;
-    transition:transform .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
-    white-space:nowrap;
-  }
-  .nav-link:hover{
-    color:var(--text);
-    background:var(--panel);
-    border-color:var(--border);
-    transform:translateY(-1px);
-  }
-  .nav-link.active{
-    color:var(--text);
-    background:rgba(255,212,0,0.16);
-    border-color:rgba(255,212,0,0.35);
-  }
-
-  .nav-link.cta{
-    color:#111;
-    background:var(--accent);
-    border-color:rgba(0,0,0,0.08);
-    font-weight:800;
-  }
-  .nav-link.cta:hover{
-    transform:translateY(-1px);
-    filter:brightness(1.02);
-  }
-
-  .nav-toggle{
-    display:none;
-    border:1px solid var(--border);
-    background:var(--panel);
-    color:var(--text);
-    border-radius:999px;
-    padding:10px 12px;
-    gap:6px;
-    align-items:center;
-    cursor:pointer;
-  }
-  .nav-toggle-bar{
-    display:block;
-    width:18px;
-    height:2px;
-    background:var(--text);
-    margin:2px 0;
-    border-radius:2px;
-  }
-  .nav-toggle-label{
-    font-size:12px;
-    color:var(--muted);
-    margin-left:6px;
-  }
-
-  @media (max-width: 860px){
-    .nav-toggle{ display:flex; }
-    .nav{
-      position:absolute;
-      right:18px;
-      top:62px;
-      width:min(88vw, 380px);
-      display:none;
-      flex-direction:column;
-      align-items:stretch;
-      background:rgba(11,11,15,0.96);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:10px;
-      box-shadow:var(--shadow);
-    }
-    .nav.open{ display:flex; }
-    .nav-link{
-      padding:12px 12px;
-      border-radius:12px;
-    }
-  }
-</style>
-
-<script>
-  // Mobile menu toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  navToggle?.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  // Close menu after clicking a link (mobile)
-  navMenu?.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      if (navMenu.classList.contains('open')) {
-        navMenu.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-
-  // Active link highlight based on scroll position
-  const links = Array.from(document.querySelectorAll('.nav-link'));
-  const sectionIds = links
-    .map(a => a.getAttribute('href'))
-    .filter(h => h && h.startsWith('#'))
-    .map(h => h.slice(1));
-
-  const sections = sectionIds
-    .map(id => document.getElementById(id))
-    .filter(Boolean);
-
-  const setActive = () => {
-    const y = window.scrollY + 110; // header offset
-    let currentId = sections[0]?.id;
-
-    for (const sec of sections) {
-      if (sec.offsetTop <= y) currentId = sec.id;
-    }
-
-    links.forEach(a => {
-      const href = a.getAttribute('href');
-      const isActive = href === `#${currentId}`;
-      a.classList.toggle('active', isActive);
-    });
-  };
-
-  window.addEventListener('scroll', setActive, { passive: true });
-  window.addEventListener('load', setActive);
-</script>
-
+.plan-badge:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -230,7 +38,14 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+      
+        <div class="hero-title">
+  <h1 class="hero-name">马宁宁</h1>
+
+  <a href="#overview" class="plan-badge">
+    ● 2026 Plan
+  </a>
+</div>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
